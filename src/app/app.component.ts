@@ -14,9 +14,25 @@ export class AppComponent {
   tweet = {
     body: '....',
     likesCount: 10,
-    isLiked: true
-  }
+    isLiked: true,
+  };
+  courses = [
+    { id: 1, name: 'course 1' },
+    { id: 2, name: 'course 2' },
+    { id: 3, name: 'course 3' },
+  ];
   onFavoriteChanged(eventArgs: FavoriteChangedEventArgs) {
     console.log('favorite changed', eventArgs);
+  }
+
+  onAdd() {
+    this.courses.push({ id: 4, name: 'course 4' });
+  }
+  onRemove(course: any) {
+    let index = this.courses.indexOf(course);
+    this.courses.splice(index, 1);
+  }
+  onChange(course: any) {
+    course.name = 'UPDATED';
   }
 }
