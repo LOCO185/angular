@@ -2,6 +2,11 @@
 <div>
     <favorite [is-favorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></favorite>
 </div>
-<!-- <br>
-<input type="text" [(ngModel)]="title">
-<br> -->
+<br>
+    <like 
+        [likesCount]="tweet.likesCount"
+        [isActive]="tweet.isLiked"
+    ></like>
+<br>
+<input type="text" [(ngModel)]="post.title">
+<br>
