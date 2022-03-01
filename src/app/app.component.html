@@ -1,5 +1,5 @@
 <div>
-    <favorite [isSelected]="post.isSelected"></favorite>
+    <favorite [is-favorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></favorite>
 </div>
 <!-- <br>
 <input type="text" [(ngModel)]="title">
