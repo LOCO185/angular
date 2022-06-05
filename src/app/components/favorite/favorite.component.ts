@@ -21,10 +21,6 @@ export class FavoriteComponent {
     this.isFavorite = !this.isFavorite;
     this.click.emit({ newValue: this.isFavorite });
   }
-  // onClick() {
-  //   this.isFavorite = !this.isFavorite;
-  //   this.click.emit({ newValue: this.isFavorite });
-  // }
 }
 
 export interface FavoriteChangedEventArgs {
